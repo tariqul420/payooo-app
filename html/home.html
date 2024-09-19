@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/07f60ceea9.js" crossorigin="anonymous"></script>
+
+    <title>Dashboard - Payoo App</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <style>
+      .active {
+        border: 2px solid rgb(34 197 94);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="flex flex-col justify-center items-center w-[414px] mt-5 m-auto artboard artboard-demo p-8">
+      <!-- ? Balance Section start hear -->
+      <div class="flex items-center gap-10">
+        <div class="stats">
+          <div class="stat">
+            <div id="current-amount" class="stat-value">100</div>
+            <div class="stat-desc">Available Balance</div>
+          </div>
+        </div>
+        <div>
+          <button id="log-out" class="btn btn-outline text-[#0808089c]"><i class="fa-solid fa-arrow-right-to-bracket"></i> Log Out</button>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h1 class="text-2xl font-bold text-center">🔥 Welcome to Payooo!</h1>
+      <p class="font-semibold text-center">Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
+
+      <div class="grid grid-cols-3 gap-4 mt-8">
+        <div id="payment1" class="payment flex flex-col items-center border-2 border-solid border-[#0808089c] rounded-xl p-2 hover:border-green-500">
+          <img class="w-10" src="../assets/wallet.png" />
+          <p class="text-center font-semibold">Add Money</p>
+        </div>
+
+        <div id="payment2" class="payment flex flex-col items-center border-2 border-solid border-[#0808089c] rounded-xl p-2 hover:border-green-500">
+          <img class="w-10" src="../assets/cash-out.png" />
+          <p class="text-center font-semibold">Cash Out</p>
+        </div>
+
+        <div class="payment flex flex-col items-center border-2 border-solid border-[#0808089c] rounded-xl p-2 hover:border-green-500">
+          <img class="w-10" src="../assets/Transfer-Money.png" />
+          <p class="text-center font-semibold">Transfer</p>
+        </div>
+
+        <div class="payment flex flex-col items-center border-2 border-solid border-[#0808089c] rounded-xl p-2 hover:border-green-500">
+          <img class="w-10" src="../assets/money-bag.png" />
+          <p class="text-center font-semibold">Get Bonus</p>
+        </div>
+
+        <div class="payment flex flex-col items-center border-2 border-solid border-[#0808089c] rounded-xl p-2 hover:border-green-500">
+          <img class="w-10" src="../assets/purse.png" />
+          <p class="text-center font-semibold">Pay Bill</p>
+        </div>
+
+        <div class="payment flex flex-col items-center border-2 border-solid border-[#0808089c] rounded-xl p-2 hover:border-green-500">
+          <img class="w-10" src="../assets/transaction.png" />
+          <p class="text-center font-semibold">Transactions</p>
+        </div>
+      </div>
+
+      <!-- ? add money section start hear -->
+      <div id="add-money-section" class="hero mt-4 rounded-2xl hidden">
+        <div class="hero-content flex-col">
+          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <h1 class="text-xl font-bold">Add Money</h1>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Select A Bank</span>
+                </label>
+                <select class="select select-bordered w-full max-w-xs">
+                  <option disabled selected>Select back</option>
+                  <option>Bangladesh Bank</option>
+                  <option>City Bank</option>
+                </select>
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Bank Account Number</span>
+                </label>
+                <input type="text" placeholder="Enter account number" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount to Add</span>
+                </label>
+                <input id="add-money-amount" type="text" placeholder="Add Amount to withdraw" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin Number</span>
+                </label>
+                <input id="pin-number" type="password" placeholder="Enter 4 Digit Pin" class="input input-bordered" required autocomplete="off" />
+              </div>
+              <div class="form-control mt-6">
+                <button id="add-money" class="btn btn-primary">Add Money</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- ? cash-out section start hear -->
+      <div id="withdraw-money-section" class="hero mt-4 rounded-2xl hidden">
+        <div class="hero-content flex-col">
+          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <h1 class="text-xl font-bold">Cash Out</h1>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Agent Number</span>
+                </label>
+                <input type="text" placeholder="Enter 11 digit number" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount</span>
+                </label>
+                <input id="withdraw-money-amount" type="text" placeholder="Enter amount to withdraw" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin Number</span>
+                </label>
+                <input id="withdraw-pin-number" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered" required autocomplete="off" />
+              </div>
+              <div class="form-control mt-6">
+                <button id="withdraw-money" class="btn btn-primary">Withdraw Money</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <script src="../js/home.js"></script>
+  </body>
+</html>
