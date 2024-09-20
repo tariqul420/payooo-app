@@ -12,6 +12,17 @@
       .active {
         border: 2px solid rgb(34 197 94);
       }
+      .div{
+        padding: 10px;
+        border: 1px solid rgba(34, 197, 94, 0.514);
+        border-radius: 5px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 800;
+        gap: 5px;
+      }
     </style>
   </head>
   <body>
@@ -20,7 +31,7 @@
       <div class="flex items-center gap-10">
         <div class="stats">
           <div class="stat">
-            <div id="current-amount" class="stat-value">100</div>
+            <div id="current-amount" class="stat-value">00</div>
             <div class="stat-desc">Available Balance</div>
           </div>
         </div>
@@ -45,22 +56,22 @@
           <p class="text-center font-semibold">Cash Out</p>
         </div>
 
-        <div class="payment flex flex-col items-center border-2 border-solid border-[#0808089c] rounded-xl p-2 hover:border-green-500">
+        <div id="payment3" class="payment flex flex-col items-center border-2 border-solid border-[#0808089c] rounded-xl p-2 hover:border-green-500">
           <img class="w-10" src="../assets/Transfer-Money.png" />
           <p class="text-center font-semibold">Transfer</p>
         </div>
 
-        <div class="payment flex flex-col items-center border-2 border-solid border-[#0808089c] rounded-xl p-2 hover:border-green-500">
+        <div id="payment4" class="payment flex flex-col items-center border-2 border-solid border-[#0808089c] rounded-xl p-2 hover:border-green-500">
           <img class="w-10" src="../assets/money-bag.png" />
           <p class="text-center font-semibold">Get Bonus</p>
         </div>
 
-        <div class="payment flex flex-col items-center border-2 border-solid border-[#0808089c] rounded-xl p-2 hover:border-green-500">
+        <div id="payment5" class="payment flex flex-col items-center border-2 border-solid border-[#0808089c] rounded-xl p-2 hover:border-green-500">
           <img class="w-10" src="../assets/purse.png" />
           <p class="text-center font-semibold">Pay Bill</p>
         </div>
 
-        <div class="payment flex flex-col items-center border-2 border-solid border-[#0808089c] rounded-xl p-2 hover:border-green-500">
+        <div id="payment6" class="payment flex flex-col items-center border-2 border-solid border-[#0808089c] rounded-xl p-2 hover:border-green-500">
           <img class="w-10" src="../assets/transaction.png" />
           <p class="text-center font-semibold">Transactions</p>
         </div>
@@ -137,6 +148,18 @@
               </div>
             </form>
           </div>
+        </div>
+      </div>
+
+      <!-- ? Transaction History section start hear -->
+      <div id="transaction-section" class="mt-4 hidden">
+        <div class="flex items-center gap-20">
+          <h1 class="text-xl font-semibold">Transaction History</h1>
+          <p class="font-bold">View All</p>
+        </div>
+
+        <div id="transaction" class="flex flex-col gap-4 mt-6">
+
         </div>
       </div>
 

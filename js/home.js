@@ -18,6 +18,10 @@ document.getElementById("payment2").addEventListener("click", function () {
   showSection("withdraw-money-section");
 });
 
+document.getElementById("payment6").addEventListener("click", function () {
+  showSection("transaction-section");
+});
+
 let currentAmountNumber = innerText("current-amount");
 
 // ? add money section start hear
@@ -31,7 +35,8 @@ document.getElementById("add-money").addEventListener("click", function (event) 
   } else {
     alert("Failed Add Money! Please Try Again.");
   }
-
+  transaction("Add",amountNumber,"../assets/wallet.png");
+  
   document.getElementById("add-money-amount").value = "";
   document.getElementById("add-pin-number").value = "";
 });
@@ -51,6 +56,8 @@ document.getElementById("withdraw-money").addEventListener("click", function (ev
   } else {
     alert("Failed Cash Out! Please Try Again.");
   }
+
+  transaction("Withdraw",amountNumber,"../assets/cash-out.png");
 
   document.getElementById("withdraw-money-amount").value = "";
   document.getElementById("withdraw-pin-number").value = "";
